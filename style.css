@@ -1,25 +1,92 @@
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-
-main {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Game Canvas */
 canvas {
     border: 2px solid #333;
+    border-radius: 10px;
     background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Controls */
+.controls {
+    margin-top: 20px;
+}
+
+.game-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+.game-btn:hover {
+    background: #45a049;
+    transform: translateY(-5px);
+}
+
+.game-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Game Messages */
+.game-message {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Player animation */
+.player {
+    animation: bounce 0.5s infinite ease-in-out;
+}
+
+/* Enemy animation */
+.enemy {
+    animation: bounce 1s infinite ease-in-out;
+}
+
+/* Power-up animation */
+.power-up {
+    animation: bounce 0.7s infinite ease-in-out;
 }
