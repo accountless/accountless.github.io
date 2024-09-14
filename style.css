@@ -91,3 +91,26 @@ canvas {
 .power-up {
     animation: bounce 0.7s infinite ease-in-out;
 }
+
+/* Set a specific width and height for the canvas */
+canvas {
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 800px; /* Explicit width */
+    height: 600px; /* Explicit height */
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
