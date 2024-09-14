@@ -1,25 +1,21 @@
-<link rel="stylesheet" href="style.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play My Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Modern Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Game!</h1>
-    </header>
-    <main>
-        <!-- Canvas for the game -->
+    <div class="container">
+        <h1>Canvas Game</h1>
         <canvas id="gameCanvas" width="800" height="600"></canvas>
-    </main>
-    <footer>
-        <p>© 2024 My Game Studio</p>
-    </footer>
-
-    <!-- Include your JavaScript file -->
-    <script src="game.js"></script>
+        <div class="controls">
+            <button id="startBtn" class="game-btn">Start Game</button>
+            <button id="restartBtn" class="game-btn" style="display:none;">Restart Game</button>
+        </div>
+        <p id="message" class="game-message"></p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
